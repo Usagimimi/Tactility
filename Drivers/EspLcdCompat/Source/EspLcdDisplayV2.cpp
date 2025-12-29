@@ -126,7 +126,10 @@ bool EspLcdDisplayV2::startLvgl() {
 
     auto lvgl_port_config  = getLvglPortDisplayConfig(configuration, ioHandle, panelHandle);
 
-    if (isRgbPanel()) {
+    if (useDsiPanel()) {
+        auto dsi_config = getLvglPortDisplayDsiConfig(ioHandle, panelHandle);
+        lvglDisplay = lvgl_port_add_disp_dsi(&lvgl_port_config, &dsi_config);
+    } else if (isRgbPanel()) {
         auto rgb_config = getLvglPortDisplayRgbConfig(ioHandle, panelHandle);
         lvglDisplay = lvgl_port_add_disp_rgb(&lvgl_port_config , &rgb_config);
     } else {

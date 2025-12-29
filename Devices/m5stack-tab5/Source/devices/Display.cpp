@@ -1,9 +1,10 @@
 #include "Display.h"
+#include ""
 
 #include <Gt911Touch.h>
 #include <PwmBacklight.h>
-#include <RgbDisplay.h>
 #include <Tactility/Log.h>
+#include <Tactility/Mutex.h>
 
 std::shared_ptr<tt::hal::touch::TouchDevice> _Nullable createTouch() {
     // Note for future changes: Reset pin is 38 and interrupt pin is 18
