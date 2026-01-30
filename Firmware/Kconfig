@@ -41,6 +41,8 @@ menu "Tactility App"
             bool "Elecrow CrowPanel Basic 3.5"
         config TT_DEVICE_ELECROW_CROWPANEL_BASIC_50
             bool "Elecrow CrowPanel Basic 5.0"
+        config TT_DEVICE_ELECROW_CROWPANEL_BASIC_70
+            bool "Elecrow CrowPanel Basic 7.0"    
         config TT_DEVICE_GUITION_JC1060P470CIWY
             bool "Guition JC1060P470CIWY"
         config TT_DEVICE_GUITION_JC2432W328C
